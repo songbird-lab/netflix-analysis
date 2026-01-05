@@ -7,7 +7,7 @@ df = pd.read_csv(r"C:\Users\songb\Documents\pythonscripts\netflix-analysis\netfl
 
 print(df.shape)
 
-print(df.head)
+print(df.head())
 
 print(df.columns)
 
@@ -18,6 +18,15 @@ print(x)
 pieChart = px.pie(x, values = 'count', names = 'rating', title = 'Distribution of content ratings on Netflix')
 pieChart.show()
 
-df['director'] =df['director'].fillna('Director Not Specified')
-df.head()
+df['director'] =df['director'].fillna('Director Not Specified') # takes our director column and clean the missing NA values
+print(df.head())
 
+directors_list = pd.DataFrame()
+print(directors_list) # produces empty dataframe for testing
+
+directors_list = df['director'].str.split(',', expand = True).stack()
+print(directors_list)
+
+directors_list = directors_list.to_frame(name = 'director')
+directors_list = directors_list.reset_index(drop = True)
+print(directors_list)
