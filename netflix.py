@@ -3,7 +3,7 @@ import numpy as np  # used for linear operations
 import textblob as TextBlob # used for sentiment analysis
 import plotly.express as px  # used for data visualization
 
-df = pd.read_csv("netflix_titles.csv")
+df = pd.read_csv(r"C:\Users\songb\Documents\pythonscripts\netflix-analysis\netflix_titles.csv")
 
 print(df.shape)
 
