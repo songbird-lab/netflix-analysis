@@ -2,8 +2,14 @@ import pandas as pd # used for data preparation
 import numpy as np  # used for linear operations
 import textblob as TextBlob # used for sentiment analysis
 import plotly.express as px  # used for data visualization
+from pathlib import Path
 
-df = pd.read_csv(r"C:\Users\songb\Documents\pythonscripts\netflix-analysis\netflix_titles.csv")
+# Get the directory where the script lives
+BASE_DIR = Path(__file__).parent
+
+# Load the CSV using a relative path, not absolute path.
+
+df = pd.read_csv(BASE_DIR / "netflix_titles.csv")
 
 print(df.shape)
 
