@@ -2,7 +2,7 @@ import pandas as pd # used for data preparation
 import numpy as np  # used for linear operations
 import textblob as TextBlob # used for sentiment analysis
 import plotly.express as px  # used for data visualization
-from pathlib import Path
+from pathlib import Path # used to set relative paths
 
 # Get the directory where the script lives
 BASE_DIR = Path(__file__).parent
