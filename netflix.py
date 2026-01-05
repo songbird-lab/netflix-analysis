@@ -21,4 +21,3 @@ pieChart.show()
 df['director'] =df['director'].fillna('Director Not Specified')
 df.head()
 
-# 11:44 approximate timestamp in video at https://www.youtube.com/watch?v=1ZftU-eU4VA&t=555s
